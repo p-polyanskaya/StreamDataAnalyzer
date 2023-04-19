@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package stream;
+option csharp_namespace = "GrpcServices";
+import "google/protobuf/timestamp.proto";
+
+message Request{
+  Message message = 1;
+}
+
+message Response{
+}
+
+service DataStreamer{
+  rpc SendStreamData (stream Request) returns (Response);
+}
+
+message Message {
+  string id = 1;
+  string userName = 2;
+  google.protobuf.Timestamp timeOfMessage = 3;
+  string messageText = 4;
+  string source = 5;
+}

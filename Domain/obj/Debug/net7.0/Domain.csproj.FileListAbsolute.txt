@@ -1,0 +1,12 @@
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/bin/Debug/net7.0/Domain.deps.json
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/bin/Debug/net7.0/Domain.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/bin/Debug/net7.0/Domain.pdb
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.csproj.AssemblyReference.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.AssemblyInfoInputs.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.AssemblyInfo.cs
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.csproj.CoreCompileInputs.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/refint/Domain.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.pdb
+/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/ref/Domain.dll

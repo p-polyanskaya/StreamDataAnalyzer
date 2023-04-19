@@ -1,0 +1,3 @@
+obj/Debug/net7.0/protos/Stream.cs \
+obj/Debug/net7.0/protos/StreamGrpc.cs: /Users/polina/.nuget/packages/grpc.tools/2.54.0/build/native/include/google/protobuf/timestamp.proto\
+ protos/stream.proto

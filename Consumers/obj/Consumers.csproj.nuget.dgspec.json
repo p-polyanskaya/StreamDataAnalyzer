@@ -1,0 +1,337 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/polina/RiderProjects/StreamDataAnalyzer/Consumers/Consumers.csproj": {}
+  },
+  "projects": {
+    "/Users/polina/RiderProjects/StreamDataAnalyzer/Application/Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/polina/RiderProjects/StreamDataAnalyzer/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Application/Application.csproj",
+        "packagesPath": "/Users/polina/.nuget/packages/",
+        "outputPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/polina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj": {
+                "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj"
+              },
+              "/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/Redis.csproj": {
+                "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/Redis.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.6.104, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/polina/.vscode-dotnet-sdk/.dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/polina/RiderProjects/StreamDataAnalyzer/Consumers/Consumers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/polina/RiderProjects/StreamDataAnalyzer/Consumers/Consumers.csproj",
+        "projectName": "Consumers",
+        "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Consumers/Consumers.csproj",
+        "packagesPath": "/Users/polina/.nuget/packages/",
+        "outputPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Consumers/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/polina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/polina/RiderProjects/StreamDataAnalyzer/Application/Application.csproj": {
+                "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Application/Application.csproj"
+              },
+              "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj": {
+                "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj"
+              },
+              "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj": {
+                "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/polina/.vscode-dotnet-sdk/.dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj",
+        "packagesPath": "/Users/polina/.nuget/packages/",
+        "outputPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/polina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/polina/.vscode-dotnet-sdk/.dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/Redis.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/Redis.csproj",
+        "projectName": "Redis",
+        "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/Redis.csproj",
+        "packagesPath": "/Users/polina/.nuget/packages/",
+        "outputPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/polina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj": {
+                "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj"
+              },
+              "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj": {
+                "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.6.104, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/polina/.vscode-dotnet-sdk/.dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj",
+        "projectName": "Serializator",
+        "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj",
+        "packagesPath": "/Users/polina/.nuget/packages/",
+        "outputPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/polina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/polina/.vscode-dotnet-sdk/.dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

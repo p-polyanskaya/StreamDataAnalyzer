@@ -1,0 +1,12 @@
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/obj/Debug/net7.0/GrpcServices.csproj.AssemblyReference.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/obj/Debug/net7.0/GrpcServices.GeneratedMSBuildEditorConfig.editorconfig
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/obj/Debug/net7.0/GrpcServices.AssemblyInfoInputs.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/obj/Debug/net7.0/GrpcServices.AssemblyInfo.cs
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/obj/Debug/net7.0/GrpcServices.csproj.CoreCompileInputs.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/bin/Debug/net7.0/GrpcServices.deps.json
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/bin/Debug/net7.0/GrpcServices.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/bin/Debug/net7.0/GrpcServices.pdb
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/obj/Debug/net7.0/GrpcServices.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/obj/Debug/net7.0/refint/GrpcServices.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/obj/Debug/net7.0/GrpcServices.pdb
+/Users/polina/RiderProjects/StreamDataAnalyzer/GrpcServices/obj/Debug/net7.0/ref/GrpcServices.dll

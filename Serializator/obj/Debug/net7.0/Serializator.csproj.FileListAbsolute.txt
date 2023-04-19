@@ -1,0 +1,12 @@
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/obj/Debug/net7.0/Serializator.csproj.AssemblyReference.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/obj/Debug/net7.0/Serializator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/obj/Debug/net7.0/Serializator.AssemblyInfoInputs.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/obj/Debug/net7.0/Serializator.AssemblyInfo.cs
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/obj/Debug/net7.0/Serializator.csproj.CoreCompileInputs.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/bin/Debug/net7.0/Serializator.deps.json
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/bin/Debug/net7.0/Serializator.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/bin/Debug/net7.0/Serializator.pdb
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/obj/Debug/net7.0/Serializator.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/obj/Debug/net7.0/refint/Serializator.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/obj/Debug/net7.0/Serializator.pdb
+/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/obj/Debug/net7.0/ref/Serializator.dll

@@ -1,0 +1,17 @@
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/obj/Debug/net7.0/Redis.csproj.AssemblyReference.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/obj/Debug/net7.0/Redis.GeneratedMSBuildEditorConfig.editorconfig
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/obj/Debug/net7.0/Redis.AssemblyInfoInputs.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/obj/Debug/net7.0/Redis.AssemblyInfo.cs
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/obj/Debug/net7.0/Redis.csproj.CoreCompileInputs.cache
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/bin/Debug/net7.0/Redis.deps.json
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/bin/Debug/net7.0/Redis.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/bin/Debug/net7.0/Redis.pdb
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/bin/Debug/net7.0/Domain.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/bin/Debug/net7.0/Serializator.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/bin/Debug/net7.0/Domain.pdb
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/bin/Debug/net7.0/Serializator.pdb
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/obj/Debug/net7.0/Redis.csproj.CopyComplete
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/obj/Debug/net7.0/Redis.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/obj/Debug/net7.0/refint/Redis.dll
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/obj/Debug/net7.0/Redis.pdb
+/Users/polina/RiderProjects/StreamDataAnalyzer/Redis/obj/Debug/net7.0/ref/Redis.dll

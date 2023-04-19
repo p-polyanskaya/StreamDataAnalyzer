@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Endpoint", "Endpoint\Endpoint.csproj", "{4AF7D0A1-DF76-4457-AD12-8412C661240B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumers", "Consumers\Consumers.csproj", "{DFE4C93B-2F9B-4AF9-A72A-D39A3107FD5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{A7CB7669-D1CB-463F-A665-A6B4238A2893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcServices", "GrpcServices\GrpcServices.csproj", "{F07282B3-ABFC-4128-AB49-CCC78F96E908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{11394B9E-9191-4C5F-8D37-AC6A2297A8A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redis", "Redis\Redis.csproj", "{8DA8B3D6-ADA6-4916-92CB-637580E5ACBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serializator", "Serializator\Serializator.csproj", "{F0A34AE2-4B4E-4AD5-ACEF-91E0CE0F9598}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AF7D0A1-DF76-4457-AD12-8412C661240B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF7D0A1-DF76-4457-AD12-8412C661240B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF7D0A1-DF76-4457-AD12-8412C661240B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF7D0A1-DF76-4457-AD12-8412C661240B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE4C93B-2F9B-4AF9-A72A-D39A3107FD5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE4C93B-2F9B-4AF9-A72A-D39A3107FD5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE4C93B-2F9B-4AF9-A72A-D39A3107FD5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE4C93B-2F9B-4AF9-A72A-D39A3107FD5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CB7669-D1CB-463F-A665-A6B4238A2893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CB7669-D1CB-463F-A665-A6B4238A2893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CB7669-D1CB-463F-A665-A6B4238A2893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CB7669-D1CB-463F-A665-A6B4238A2893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F07282B3-ABFC-4128-AB49-CCC78F96E908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07282B3-ABFC-4128-AB49-CCC78F96E908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07282B3-ABFC-4128-AB49-CCC78F96E908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07282B3-ABFC-4128-AB49-CCC78F96E908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11394B9E-9191-4C5F-8D37-AC6A2297A8A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11394B9E-9191-4C5F-8D37-AC6A2297A8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11394B9E-9191-4C5F-8D37-AC6A2297A8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11394B9E-9191-4C5F-8D37-AC6A2297A8A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA8B3D6-ADA6-4916-92CB-637580E5ACBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA8B3D6-ADA6-4916-92CB-637580E5ACBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA8B3D6-ADA6-4916-92CB-637580E5ACBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA8B3D6-ADA6-4916-92CB-637580E5ACBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0A34AE2-4B4E-4AD5-ACEF-91E0CE0F9598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0A34AE2-4B4E-4AD5-ACEF-91E0CE0F9598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0A34AE2-4B4E-4AD5-ACEF-91E0CE0F9598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0A34AE2-4B4E-4AD5-ACEF-91E0CE0F9598}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
