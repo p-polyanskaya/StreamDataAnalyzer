@@ -19,6 +19,7 @@
       <ProjectReference Include="..\Application\Application.csproj" />
       <ProjectReference Include="..\Consumers\Consumers.csproj" />
       <ProjectReference Include="..\GrpcServices\GrpcServices.csproj" />
+      <ProjectReference Include="..\Options\Options.csproj" />
       <ProjectReference Include="..\Redis\Redis.csproj" />
     </ItemGroup>
 

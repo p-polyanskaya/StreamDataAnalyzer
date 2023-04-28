@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj": {}
+    "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Serializator/Serializator.csproj": {}
   },
   "projects": {
-    "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj": {
+    "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Serializator/Serializator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj",
+        "projectUniqueName": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Serializator/Serializator.csproj",
         "projectName": "Serializator",
-        "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj",
+        "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Serializator/Serializator.csproj",
         "packagesPath": "/Users/polina/.nuget/packages/",
-        "outputPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/obj/",
+        "outputPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Serializator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/polina/.nuget/NuGet/NuGet.Config"

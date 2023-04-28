@@ -1,4 +1,3 @@
-using Application;
 using Confluent.Kafka;
 using Domain;
 using Serializator;
@@ -7,22 +6,28 @@ namespace Redis;
 
 public class RedisOperations
 {
+    private readonly RedisConnectorHelper _redisConnectorHelper;
+    public RedisOperations(RedisConnectorHelper redisConnectorHelper)
+    {
+        _redisConnectorHelper = redisConnectorHelper;
+    }
+    
     public void SaveBigData(Message message)
     {
-        var cache = RedisConnectorHelper.Connection.GetDatabase();
+        var cache = _redisConnectorHelper.Connection.GetDatabase();
         var messageValue = new EventSerializer<Message>().Serialize(message, new SerializationContext());
         cache.StringSet(message.Id.ToString(), messageValue);
     }
     
-    public void ReadData()  
+    public async Task<IEnumerable<Message>> ReadData()  
     {  
-        var cache = RedisConnectorHelper.Connection.GetDatabase();  
-        var devicesCount = 10000;  
-        Console.WriteLine();
-        for (int i = 0; i < devicesCount; i++)  
-        {  
-            var value = cache.StringGet($"Device_Status:{1}");
-            Console.WriteLine($"Valor={value}");  
-        }  
+        var cache = _redisConnectorHelper.Connection.GetDatabase();
+        return null;
     } 
+    
+    public async Task DeleteData(IEnumerable<Message> messages)
+    {
+        var ids = messages.Select(message => message.Id.ToString());
+        var cache = _redisConnectorHelper.Connection.GetDatabase();
+    }
 }

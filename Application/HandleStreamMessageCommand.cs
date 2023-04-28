@@ -1,6 +1,8 @@
 using Confluent.Kafka;
 using Domain;
 using MediatR;
+using Microsoft.Extensions.Options;
+using Options;
 using Redis;
 using Serializator;
 
@@ -12,28 +14,36 @@ public static class HandleStreamMessageCommand
 
     public class Handler : IRequestHandler<Request, Unit>
     {
-        private readonly RedisOperations _redis; 
-        public Handler(RedisOperations redis)
+        private readonly RedisOperations _redis;
+        private readonly IOptions<ProducersSettings> _producersOptions;
+        
+        public Handler(RedisOperations redis, IOptions<ProducersSettings> producersOptions)
         {
             _redis = redis;
+            _producersOptions = producersOptions;
         }
+        
         public async Task<Unit> Handle(Request request, CancellationToken cancellationToken)
         {
             var config = new ProducerConfig
             {
-                BootstrapServers = "localhost:9093"
+                BootstrapServers = _producersOptions.Value.ProducerForSendingMessagesToAnalyze.BootstrapServers
             };
             
             using var producer = new ProducerBuilder<Null, Message>(config)
                 .SetValueSerializer(new EventSerializer<Message>())
                 .Build();
+            
             try
             {
-                //await producer.ProduceAsync("test2-topic", request.Message, cancellationToken);
+                await producer.ProduceAsync(
+                    _producersOptions.Value.ProducerForSendingMessagesToAnalyze.Topic, 
+                    new Message<Null, Message>{Value = request.Message},
+                    cancellationToken);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                _redis.SaveBigData(request.Message);
+                //_redis.SaveBigData(request.Message);
             }
             
             return Unit.Value;

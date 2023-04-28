@@ -26,18 +26,19 @@ namespace GrpcServices {
           string.Concat(
             "ChNwcm90b3Mvc3RyZWFtLnByb3RvEgZzdHJlYW0aH2dvb2dsZS9wcm90b2J1",
             "Zi90aW1lc3RhbXAucHJvdG8iKwoHUmVxdWVzdBIgCgdtZXNzYWdlGAEgASgL",
-            "Mg8uc3RyZWFtLk1lc3NhZ2UiCgoIUmVzcG9uc2UifwoHTWVzc2FnZRIKCgJp",
-            "ZBgBIAEoCRIQCgh1c2VyTmFtZRgCIAEoCRIxCg10aW1lT2ZNZXNzYWdlGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBITCgttZXNzYWdlVGV4",
-            "dBgEIAEoCRIOCgZzb3VyY2UYBSABKAkyRQoMRGF0YVN0cmVhbWVyEjUKDlNl",
-            "bmRTdHJlYW1EYXRhEg8uc3RyZWFtLlJlcXVlc3QaEC5zdHJlYW0uUmVzcG9u",
-            "c2UoAUIPqgIMR3JwY1NlcnZpY2VzYgZwcm90bzM="));
+            "Mg8uc3RyZWFtLk1lc3NhZ2UiCgoIUmVzcG9uc2UidgoHTWVzc2FnZRIKCgJp",
+            "ZBgBIAEoCRIOCgZhdXRob3IYAiABKAkSMQoNdGltZU9mTWVzc2FnZRgDIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDAoEdGV4dBgEIAEoCRIO",
+            "CgZzb3VyY2UYBSABKAkydAoMRGF0YVN0cmVhbWVyEjUKDlNlbmRTdHJlYW1E",
+            "YXRhEg8uc3RyZWFtLlJlcXVlc3QaEC5zdHJlYW0uUmVzcG9uc2UoARItCghT",
+            "ZW5kRGF0YRIPLnN0cmVhbS5SZXF1ZXN0GhAuc3RyZWFtLlJlc3BvbnNlQg+q",
+            "AgxHcnBjU2VydmljZXNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.Request), global::GrpcServices.Request.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.Response), global::GrpcServices.Response.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.Message), global::GrpcServices.Message.Parser, new[]{ "Id", "UserName", "TimeOfMessage", "MessageText", "Source" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.Message), global::GrpcServices.Message.Parser, new[]{ "Id", "Author", "TimeOfMessage", "Text", "Source" }, null, null, null, null)
           }));
     }
     #endregion
@@ -429,9 +430,9 @@ namespace GrpcServices {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Message(Message other) : this() {
       id_ = other.id_;
-      userName_ = other.userName_;
+      author_ = other.author_;
       timeOfMessage_ = other.timeOfMessage_ != null ? other.timeOfMessage_.Clone() : null;
-      messageText_ = other.messageText_;
+      text_ = other.text_;
       source_ = other.source_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -454,15 +455,15 @@ namespace GrpcServices {
       }
     }
 
-    /// <summary>Field number for the "userName" field.</summary>
-    public const int UserNameFieldNumber = 2;
-    private string userName_ = "";
+    /// <summary>Field number for the "author" field.</summary>
+    public const int AuthorFieldNumber = 2;
+    private string author_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string UserName {
-      get { return userName_; }
+    public string Author {
+      get { return author_; }
       set {
-        userName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        author_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -478,15 +479,15 @@ namespace GrpcServices {
       }
     }
 
-    /// <summary>Field number for the "messageText" field.</summary>
-    public const int MessageTextFieldNumber = 4;
-    private string messageText_ = "";
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 4;
+    private string text_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string MessageText {
-      get { return messageText_; }
+    public string Text {
+      get { return text_; }
       set {
-        messageText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -518,9 +519,9 @@ namespace GrpcServices {
         return true;
       }
       if (Id != other.Id) return false;
-      if (UserName != other.UserName) return false;
+      if (Author != other.Author) return false;
       if (!object.Equals(TimeOfMessage, other.TimeOfMessage)) return false;
-      if (MessageText != other.MessageText) return false;
+      if (Text != other.Text) return false;
       if (Source != other.Source) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -530,9 +531,9 @@ namespace GrpcServices {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (UserName.Length != 0) hash ^= UserName.GetHashCode();
+      if (Author.Length != 0) hash ^= Author.GetHashCode();
       if (timeOfMessage_ != null) hash ^= TimeOfMessage.GetHashCode();
-      if (MessageText.Length != 0) hash ^= MessageText.GetHashCode();
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
       if (Source.Length != 0) hash ^= Source.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -556,17 +557,17 @@ namespace GrpcServices {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (UserName.Length != 0) {
+      if (Author.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(UserName);
+        output.WriteString(Author);
       }
       if (timeOfMessage_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(TimeOfMessage);
       }
-      if (MessageText.Length != 0) {
+      if (Text.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteString(MessageText);
+        output.WriteString(Text);
       }
       if (Source.Length != 0) {
         output.WriteRawTag(42);
@@ -586,17 +587,17 @@ namespace GrpcServices {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (UserName.Length != 0) {
+      if (Author.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(UserName);
+        output.WriteString(Author);
       }
       if (timeOfMessage_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(TimeOfMessage);
       }
-      if (MessageText.Length != 0) {
+      if (Text.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteString(MessageText);
+        output.WriteString(Text);
       }
       if (Source.Length != 0) {
         output.WriteRawTag(42);
@@ -615,14 +616,14 @@ namespace GrpcServices {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (UserName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserName);
+      if (Author.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Author);
       }
       if (timeOfMessage_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeOfMessage);
       }
-      if (MessageText.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(MessageText);
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
       if (Source.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Source);
@@ -642,8 +643,8 @@ namespace GrpcServices {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.UserName.Length != 0) {
-        UserName = other.UserName;
+      if (other.Author.Length != 0) {
+        Author = other.Author;
       }
       if (other.timeOfMessage_ != null) {
         if (timeOfMessage_ == null) {
@@ -651,8 +652,8 @@ namespace GrpcServices {
         }
         TimeOfMessage.MergeFrom(other.TimeOfMessage);
       }
-      if (other.MessageText.Length != 0) {
-        MessageText = other.MessageText;
+      if (other.Text.Length != 0) {
+        Text = other.Text;
       }
       if (other.Source.Length != 0) {
         Source = other.Source;
@@ -677,7 +678,7 @@ namespace GrpcServices {
             break;
           }
           case 18: {
-            UserName = input.ReadString();
+            Author = input.ReadString();
             break;
           }
           case 26: {
@@ -688,7 +689,7 @@ namespace GrpcServices {
             break;
           }
           case 34: {
-            MessageText = input.ReadString();
+            Text = input.ReadString();
             break;
           }
           case 42: {
@@ -715,7 +716,7 @@ namespace GrpcServices {
             break;
           }
           case 18: {
-            UserName = input.ReadString();
+            Author = input.ReadString();
             break;
           }
           case 26: {
@@ -726,7 +727,7 @@ namespace GrpcServices {
             break;
           }
           case 34: {
-            MessageText = input.ReadString();
+            Text = input.ReadString();
             break;
           }
           case 42: {

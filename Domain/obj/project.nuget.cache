@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rLt4LTdI4m+YSK2Oi36PmO5SGutFeVtJt6KI1CLZ6xKhEHydJdxZbMliS4tDF4wW3bMIO+5Pv2b+xK3KvjtKXg==",
+  "dgSpecHash": "t6/0ykyYQRgsxzBUQfQQv7IcJP6hMzehdaf39U/UCeY4X0aflM0sE3OBPirk6e/vN+I9w1eEEl2HdmQ17fiEUw==",
   "success": true,
-  "projectFilePath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj",
+  "projectFilePath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

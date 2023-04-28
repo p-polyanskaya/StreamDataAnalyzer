@@ -3,21 +3,21 @@
 public class Message
 {
     public Guid Id { get; }
-    public string UserName { get; }
+    public string Author { get; }
     public DateTime TimeOfMessage { get; }
-    public byte[] MessageText { get; }
+    public string Text { get; }
     public string Source { get; }
 
     public Message(
         Guid id,
-        string userName,
-        byte[] messageText, 
-        DateTime timeOfMessage, 
+        string author,
+        string text,
+        DateTime timeOfMessage,
         string source)
     {
         Id = id;
-        UserName = userName;
-        MessageText = messageText;
+        Author = author;
+        Text = text;
         TimeOfMessage = timeOfMessage;
         Source = source;
     }

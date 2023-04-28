@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redis", "Redis\Redis.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serializator", "Serializator\Serializator.csproj", "{F0A34AE2-4B4E-4AD5-ACEF-91E0CE0F9598}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Options", "Options\Options.csproj", "{1C51AFCC-7CF4-4C64-AEC5-CB245948C3AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{F0A34AE2-4B4E-4AD5-ACEF-91E0CE0F9598}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0A34AE2-4B4E-4AD5-ACEF-91E0CE0F9598}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0A34AE2-4B4E-4AD5-ACEF-91E0CE0F9598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C51AFCC-7CF4-4C64-AEC5-CB245948C3AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C51AFCC-7CF4-4C64-AEC5-CB245948C3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C51AFCC-7CF4-4C64-AEC5-CB245948C3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C51AFCC-7CF4-4C64-AEC5-CB245948C3AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

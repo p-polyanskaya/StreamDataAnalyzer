@@ -1,21 +1,18 @@
+using Microsoft.Extensions.Options;
+using Options;
 using StackExchange.Redis;
 
-namespace Application;
+namespace Redis;
 
 public class RedisConnectorHelper
-{
-    static RedisConnectorHelper()
-    {
-        RedisConnectorHelper.lazyConnection = new Lazy<ConnectionMultiplexer>(() =>
-        {
-            return ConnectionMultiplexer.Connect("localhost:6379");
-        });
-    }
+{   
+    private readonly Lazy<ConnectionMultiplexer> _lazyConnection;
 
-    private static Lazy<ConnectionMultiplexer> lazyConnection;
-
-    public static ConnectionMultiplexer Connection
+    public RedisConnectorHelper(IOptions<RedisConnection> redisOptions)
     {
-        get { return lazyConnection.Value; }
+        _lazyConnection = new Lazy<ConnectionMultiplexer>(() => 
+            ConnectionMultiplexer.Connect(redisOptions.Value.Url));
     }
+    
+    public ConnectionMultiplexer Connection => _lazyConnection.Value;
 }

@@ -10,3 +10,15 @@
 /Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/refint/Domain.dll
 /Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.pdb
 /Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/Debug/net7.0/ref/Domain.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/bin/Debug/net7.0/Domain.deps.json
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/bin/Debug/net7.0/Domain.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/bin/Debug/net7.0/Domain.pdb
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.csproj.AssemblyReference.cache
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.AssemblyInfoInputs.cache
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.AssemblyInfo.cs
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.csproj.CoreCompileInputs.cache
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/obj/Debug/net7.0/refint/Domain.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/obj/Debug/net7.0/Domain.pdb
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/obj/Debug/net7.0/ref/Domain.dll

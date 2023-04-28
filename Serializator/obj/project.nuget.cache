@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LkNCZ8KlpmK4pqhEad7OKlEEgf1pf8RZFSOAYlvmQZUiyiEVCBoAEFbmFfwpEBcQZx8+l3drZDVntOgW7nnT8g==",
+  "dgSpecHash": "IGIs/RTb/ZjzGpEcgC+U2GMuCMSUYwQ23CV3xqu49lo3unQ2zZtcGJYlCFZbq9lrg936JavriC0PUOqzsWIHYA==",
   "success": true,
-  "projectFilePath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Serializator/Serializator.csproj",
+  "projectFilePath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Serializator/Serializator.csproj",
   "expectedPackageFiles": [
     "/Users/polina/.nuget/packages/confluent.kafka/2.1.0/confluent.kafka.2.1.0.nupkg.sha512",
     "/Users/polina/.nuget/packages/librdkafka.redist/2.1.0/librdkafka.redist.2.1.0.nupkg.sha512",

@@ -2,27 +2,30 @@
 using Confluent.Kafka;
 using Domain;
 using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
+using Microsoft.Spark.Sql;
+using Microsoft.Spark.Sql.Streaming;
+using Options;
 using Serializator;
 
 namespace Consumers;
 
 public class Consumer : BackgroundService
 {
+    private readonly IOptions<ConsumersSettings> _consumerSettings;
     private readonly ConsumerBuilder<Ignore, Message> _builder;
-    private readonly IMediator _mediator;
+    private readonly IServiceProvider _serviceProvider;
 
-    private const string Topic = "analyses_results";
-    private const string GroupId = "telegram_bot_dev";
-    private const string BootstrapServers = "localhost:9092";
-
-    public Consumer(IMediator mediator)
+    public Consumer(IOptions<ConsumersSettings> consumerSettings, IServiceProvider serviceProvider)
     {
-        _mediator = mediator;
+        _consumerSettings = consumerSettings;
+        _serviceProvider = serviceProvider;
         var config = new ConsumerConfig
         {
-            BootstrapServers = BootstrapServers,
-            GroupId = GroupId,
+            BootstrapServers = _consumerSettings.Value.ConsumerForSendingMessagesToAnalyze.BootstrapServers,
+            GroupId = _consumerSettings.Value.ConsumerForSendingMessagesToAnalyze.GroupId,
             EnableAutoCommit = false
         };
 
@@ -35,18 +38,44 @@ public class Consumer : BackgroundService
         await Task.Yield();
 
         using var consumer = _builder.Build();
-        consumer.Subscribe(Topic);
-
+        consumer.Subscribe(_consumerSettings.Value.ConsumerForSendingMessagesToAnalyze.Topic);
         while (!stoppingToken.IsCancellationRequested)
         {
-            var consumeResult = consumer.Consume(stoppingToken);
+            /*
+            var spark = SparkSession
+                .Builder()
+                .AppName("Streaming example with a UDF")
+                .GetOrCreate();
 
-            var request = new HandleAnalyzedMessageCommand.Request(consumeResult.Message.Value);
-            await _mediator.Send(request, stoppingToken);
+            var dataFrame = spark
+                .ReadStream()
+                .Format("kafka")
+                .Option("host", "kafka.bootstrap.servers")
+                .Option("port", _consumersOptions.Value.ConsumerForSendingMessagesToAnalyze.BootstrapServers)
+                .Option("subscribe",  _consumersOptions.Value.ConsumerForSendingMessagesToAnalyze.Topic)
+                .Load();
+            dataFrame
+                .WriteStream()
+                .Trigger(Trigger.ProcessingTime(5000))
+                .Start();
+            dataFrame.Show();
+            */
+            
+            try
+            {
+                var consumeResult = consumer.Consume(stoppingToken);
+                Console.WriteLine(consumeResult.Message.Value.Text);
+                var analysisResult = new AnalysisResult(consumeResult.Message.Value, "common");
+                var request = new HandleAnalyzedMessageCommand.Request(new[] { analysisResult });
 
-            consumer.Commit(consumeResult);
+                using var scope = _serviceProvider.CreateScope();
+                var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+                await mediator.Send(request, stoppingToken);
+                consumer.Commit(consumeResult);
+            }
+            catch(Exception ex)
+            {
+            }
         }
-
-        consumer.Close();
     }
 }

@@ -58,6 +58,14 @@ namespace GrpcServices {
         __Marshaller_stream_Request,
         __Marshaller_stream_Response);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcServices.Request, global::GrpcServices.Response> __Method_SendData = new grpc::Method<global::GrpcServices.Request, global::GrpcServices.Response>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SendData",
+        __Marshaller_stream_Request,
+        __Marshaller_stream_Response);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -74,6 +82,12 @@ namespace GrpcServices {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::GrpcServices.Response> SendData(global::GrpcServices.Request request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -82,7 +96,8 @@ namespace GrpcServices {
     public static grpc::ServerServiceDefinition BindService(DataStreamerBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_SendStreamData, serviceImpl.SendStreamData).Build();
+          .AddMethod(__Method_SendStreamData, serviceImpl.SendStreamData)
+          .AddMethod(__Method_SendData, serviceImpl.SendData).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -93,6 +108,7 @@ namespace GrpcServices {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DataStreamerBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_SendStreamData, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::GrpcServices.Request, global::GrpcServices.Response>(serviceImpl.SendStreamData));
+      serviceBinder.AddMethod(__Method_SendData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServices.Request, global::GrpcServices.Response>(serviceImpl.SendData));
     }
 
   }

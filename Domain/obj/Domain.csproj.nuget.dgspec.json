@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj": {}
+    "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/Domain.csproj": {}
   },
   "projects": {
-    "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj": {
+    "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj",
+        "projectUniqueName": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/Domain.csproj",
+        "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/Domain.csproj",
         "packagesPath": "/Users/polina/.nuget/packages/",
-        "outputPath": "/Users/polina/RiderProjects/StreamDataAnalyzer/Domain/obj/",
+        "outputPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/polina/.nuget/NuGet/NuGet.Config"

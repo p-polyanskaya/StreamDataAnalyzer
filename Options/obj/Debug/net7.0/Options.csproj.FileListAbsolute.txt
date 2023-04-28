@@ -1,0 +1,12 @@
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/bin/Debug/net7.0/Options.deps.json
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/bin/Debug/net7.0/Options.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/bin/Debug/net7.0/Options.pdb
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/obj/Debug/net7.0/Options.csproj.AssemblyReference.cache
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/obj/Debug/net7.0/Options.GeneratedMSBuildEditorConfig.editorconfig
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/obj/Debug/net7.0/Options.AssemblyInfoInputs.cache
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/obj/Debug/net7.0/Options.AssemblyInfo.cs
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/obj/Debug/net7.0/Options.csproj.CoreCompileInputs.cache
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/obj/Debug/net7.0/Options.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/obj/Debug/net7.0/refint/Options.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/obj/Debug/net7.0/Options.pdb
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/obj/Debug/net7.0/ref/Options.dll
