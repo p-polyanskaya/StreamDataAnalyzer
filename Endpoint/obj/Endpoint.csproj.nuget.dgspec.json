@@ -32,6 +32,9 @@
               "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/Options.csproj": {
                 "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/Options.csproj"
               },
+              "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/Postgres.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/Postgres.csproj"
+              },
               "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Redis/Redis.csproj": {
                 "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Redis/Redis.csproj"
               }
@@ -144,10 +147,69 @@
             "Microsoft.Extensions.Options": {
               "target": "Package",
               "version": "[7.0.1, )"
-            },
-            "Microsoft.Spark": {
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/polina/.vscode-dotnet-sdk/.dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/polina/Documents/GitHub/StreamDataAnalyzer/CronJob/CronJob.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/CronJob/CronJob.csproj",
+        "projectName": "CronJob",
+        "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/CronJob/CronJob.csproj",
+        "packagesPath": "/Users/polina/.nuget/packages/",
+        "outputPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/CronJob/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/polina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Application/Application.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Application/Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MediatR": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[12.0.1, )"
             }
           },
           "imports": [
@@ -251,11 +313,20 @@
               "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/Consumers.csproj": {
                 "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/Consumers.csproj"
               },
+              "/Users/polina/Documents/GitHub/StreamDataAnalyzer/CronJob/CronJob.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/CronJob/CronJob.csproj"
+              },
               "/Users/polina/Documents/GitHub/StreamDataAnalyzer/GrpcServices/GrpcServices.csproj": {
                 "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/GrpcServices/GrpcServices.csproj"
               },
+              "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Migration/Migration.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Migration/Migration.csproj"
+              },
               "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/Options.csproj": {
                 "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/Options.csproj"
+              },
+              "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/Postgres.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/Postgres.csproj"
               },
               "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Redis/Redis.csproj": {
                 "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Redis/Redis.csproj"
@@ -273,6 +344,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "FluentMigrator.Runner": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            },
             "Grpc.AspNetCore": {
               "target": "Package",
               "version": "[2.52.0, )"
@@ -280,6 +355,14 @@
             "Grpc.AspNetCore.Server.Reflection": {
               "target": "Package",
               "version": "[2.52.0, )"
+            },
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "Hangfire.MemoryStorage": {
+              "target": "Package",
+              "version": "[1.7.0, )"
             },
             "MediatR": {
               "target": "Package",
@@ -405,6 +488,73 @@
         }
       }
     },
+    "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Migration/Migration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Migration/Migration.csproj",
+        "projectName": "Migration",
+        "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Migration/Migration.csproj",
+        "packagesPath": "/Users/polina/.nuget/packages/",
+        "outputPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Migration/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/polina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FluentMigrator": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            },
+            "FluentMigrator.Runner": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            },
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/polina/.vscode-dotnet-sdk/.dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/Options.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -438,6 +588,80 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/polina/.vscode-dotnet-sdk/.dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/Postgres.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/Postgres.csproj",
+        "projectName": "Postgres",
+        "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/Postgres.csproj",
+        "packagesPath": "/Users/polina/.nuget/packages/",
+        "outputPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/polina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/Domain.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Domain/Domain.csproj"
+              },
+              "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/Options.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Options/Options.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -505,6 +729,10 @@
             "Microsoft.Extensions.Options": {
               "target": "Package",
               "version": "[7.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
             },
             "StackExchange.Redis": {
               "target": "Package",

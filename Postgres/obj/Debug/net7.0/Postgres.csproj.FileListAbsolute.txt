@@ -1,0 +1,17 @@
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/bin/Debug/net7.0/Postgres.deps.json
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/bin/Debug/net7.0/Postgres.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/bin/Debug/net7.0/Postgres.pdb
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/bin/Debug/net7.0/Domain.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/bin/Debug/net7.0/Options.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/bin/Debug/net7.0/Domain.pdb
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/bin/Debug/net7.0/Options.pdb
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/obj/Debug/net7.0/Postgres.csproj.AssemblyReference.cache
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/obj/Debug/net7.0/Postgres.GeneratedMSBuildEditorConfig.editorconfig
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/obj/Debug/net7.0/Postgres.AssemblyInfoInputs.cache
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/obj/Debug/net7.0/Postgres.AssemblyInfo.cs
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/obj/Debug/net7.0/Postgres.csproj.CoreCompileInputs.cache
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/obj/Debug/net7.0/Postgres.csproj.CopyComplete
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/obj/Debug/net7.0/Postgres.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/obj/Debug/net7.0/refint/Postgres.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/obj/Debug/net7.0/Postgres.pdb
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/obj/Debug/net7.0/ref/Postgres.dll

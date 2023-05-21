@@ -7,8 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="FluentMigrator.Runner" Version="3.3.2" />
         <PackageReference Include="Grpc.AspNetCore" Version="2.52.0" />
         <PackageReference Include="Grpc.AspNetCore.Server.Reflection" Version="2.52.0" />
+        <PackageReference Include="Hangfire" Version="1.8.0" />
+        <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
         <PackageReference Include="MediatR" Version="12.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
         <PackageReference Include="MongoDB.Driver" Version="2.19.1" />
@@ -18,8 +21,11 @@
     <ItemGroup>
       <ProjectReference Include="..\Application\Application.csproj" />
       <ProjectReference Include="..\Consumers\Consumers.csproj" />
+      <ProjectReference Include="..\CronJob\CronJob.csproj" />
       <ProjectReference Include="..\GrpcServices\GrpcServices.csproj" />
+      <ProjectReference Include="..\Migration\Migration.csproj" />
       <ProjectReference Include="..\Options\Options.csproj" />
+      <ProjectReference Include="..\Postgres\Postgres.csproj" />
       <ProjectReference Include="..\Redis\Redis.csproj" />
     </ItemGroup>
 

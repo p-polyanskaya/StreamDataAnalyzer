@@ -38,3 +38,5 @@
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/Application/obj/Debug/net7.0/ref/Application.dll
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/Application/bin/Debug/net7.0/Options.dll
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/Application/bin/Debug/net7.0/Options.pdb
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Application/bin/Debug/net7.0/Postgres.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Application/bin/Debug/net7.0/Postgres.pdb

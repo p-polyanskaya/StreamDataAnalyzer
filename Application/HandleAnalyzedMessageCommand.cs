@@ -3,23 +3,23 @@ using Domain;
 using MediatR;
 using Microsoft.Extensions.Options;
 using Options;
-using Redis;
+using Postgres;
 using Serializator;
 
 namespace Application;
 
 public static class HandleAnalyzedMessageCommand
 {
-    public record Request(IReadOnlyCollection<AnalysisResult> Messages) : IRequest<Unit>;
+    public record Request(AnalysisResult AnalysisResult) : IRequest<Unit>;
 
     public class Handler : IRequestHandler<Request, Unit>
     {
-        private readonly RedisOperations _redis;
+        private readonly FailedMessagesRepository _failedMessagesRepository;
         private readonly IOptions<ProducersSettings> _producersOptions;
         
-        public Handler(RedisOperations redis, IOptions<ProducersSettings> producersOptions)
+        public Handler(FailedMessagesRepository failedMessagesRepository, IOptions<ProducersSettings> producersOptions)
         {
-            _redis = redis;
+            _failedMessagesRepository = failedMessagesRepository;
             _producersOptions = producersOptions;
         }
         
@@ -36,18 +36,22 @@ public static class HandleAnalyzedMessageCommand
             
             try
             {
-                var tasks = request.Messages
-                    .Select(message =>
-                        producer.ProduceAsync(
-                            _producersOptions.Value.ProducerForAnalyzedMessages.Topic,
-                            new Message<Null, AnalysisResult> { Value = message },
-                            cancellationToken))
-                    .ToArray();
-                await Task.WhenAll(tasks);
+                await producer.ProduceAsync(
+                    _producersOptions.Value.ProducerForAnalyzedMessages.Topic,
+                    new Message<Null, AnalysisResult> { Value = request.AnalysisResult },
+                    cancellationToken);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
+                Console.WriteLine("Ошибка при отправке проанализированного сообщения. " + ex.Message);
+
+                var failedMessage = new FailedMessage
+                {
+                    Id = request.AnalysisResult.Message.Id,
+                    Topic = _producersOptions.Value.ProducerForAnalyzedMessages.Topic,
+                    AnalysisResult = request.AnalysisResult
+                };
+                await _failedMessagesRepository.Insert(failedMessage);
             }
             
             return Unit.Value;

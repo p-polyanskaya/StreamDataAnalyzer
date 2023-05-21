@@ -44,7 +44,7 @@ namespace GrpcServices {
     #endregion
 
   }
-  #region Messages
+  #region AnalysisResult
   public sealed partial class Request : pb::IMessage<Request>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

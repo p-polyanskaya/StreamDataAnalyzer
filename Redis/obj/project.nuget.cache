@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qj8YvpmvXdUHrLZmwzYyPHkc2JIxdrKntKMvjyhP/+qmoHgp83ZIEb8LiM/h/HCQDHxGAYDKiCGVmt7/xH4EEg==",
+  "dgSpecHash": "Ri5Zcu+7fbNCTM2ol/ZY0Xau0/KsUf74oLjzo7RRuculpg/pzpkiOBLf+dDAxHqbVOIWbbFsCI83oAZVb2sPFg==",
   "success": true,
   "projectFilePath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Redis/Redis.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "/Users/polina/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "/Users/polina/.nuget/packages/microsoft.extensions.options/7.0.1/microsoft.extensions.options.7.0.1.nupkg.sha512",
     "/Users/polina/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/polina/.nuget/packages/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512",
     "/Users/polina/.nuget/packages/pipelines.sockets.unofficial/2.2.2/pipelines.sockets.unofficial.2.2.2.nupkg.sha512",
     "/Users/polina/.nuget/packages/stackexchange.redis/2.6.104/stackexchange.redis.2.6.104.nupkg.sha512",
     "/Users/polina/.nuget/packages/system.io.pipelines/5.0.1/system.io.pipelines.5.0.1.nupkg.sha512",

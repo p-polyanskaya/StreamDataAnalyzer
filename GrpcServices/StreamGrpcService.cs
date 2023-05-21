@@ -26,13 +26,16 @@ public class StreamGrpcService : DataStreamer.DataStreamerBase
                     var command = new HandleStreamMessageCommand.Request(domainMessage);
                     await _mediator.Send(command, context.CancellationToken);
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    Console.WriteLine("Ошибка при отправке сообщения на анализ. " + ex.Message);
                 }
             }
         }
-        catch{}
+        catch(Exception ex)
+        {
+            Console.WriteLine("Ошибка в requestStream. " + ex.Message);
+        }
 
         return new Response();
     }
@@ -45,11 +48,13 @@ public class StreamGrpcService : DataStreamer.DataStreamerBase
             var domainMessage = ToDomainMessage(request.Message);
             var command = new HandleStreamMessageCommand.Request(domainMessage);
             await _mediator.Send(command, context.CancellationToken);
+
         }
-        catch
+        catch(Exception ex)
         {
-                
+            Console.WriteLine("Ошибка при отправке сообщения на анализ. " + ex.Message);
         }
+        
         return new Response();
     }
 

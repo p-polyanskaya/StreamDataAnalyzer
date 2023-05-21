@@ -10,7 +10,7 @@ namespace Application;
 
 public static class RetryFailedStreamMessageHandlingCommand
 {
-    public record Request(Message Message) : IRequest<Unit>;
+    public record Request() : IRequest<Unit>;
 
     public class Handler : IRequestHandler<Request, Unit>
     {
@@ -25,7 +25,13 @@ public static class RetryFailedStreamMessageHandlingCommand
 
         public async Task<Unit> Handle(Request request, CancellationToken cancellationToken)
         {
-            var messages = (await _redis.ReadData()).ToList();
+            
+            var messages = _redis.ReadData().ToList();
+
+            if (!messages.Any())
+            {
+                return Unit.Value;
+            }
             
             var config = new ProducerConfig
             {
@@ -36,17 +42,24 @@ public static class RetryFailedStreamMessageHandlingCommand
                 .SetValueSerializer(new EventSerializer<Message>())
                 .Build();
 
-            var tasks = messages
-                .Select(message =>
-                    producer.ProduceAsync(
-                        _producersOptions.Value.ProducerForSendingMessagesToAnalyze.Topic,
-                        new Message<Null, Message> { Value = message },
-                        cancellationToken))
-                .ToArray();
-
-            await Task.WhenAll(tasks);
-            
-            await _redis.DeleteData(messages);
+            try
+            {
+                var tasks = messages
+                    .Select(message =>
+                        producer.ProduceAsync(
+                            _producersOptions.Value.ProducerForSendingMessagesToAnalyze.Topic,
+                            new Message<Null, Message> { Value = message },
+                            cancellationToken))
+                    .ToArray();
+                
+                await Task.WhenAll(tasks);
+                
+                await _redis.DeleteData(messages);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка при отправке на анализ. "+ ex.Message);
+            }
 
             return Unit.Value;
         }

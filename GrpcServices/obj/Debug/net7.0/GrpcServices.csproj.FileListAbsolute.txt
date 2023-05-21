@@ -33,3 +33,5 @@
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/GrpcServices/obj/Debug/net7.0/ref/GrpcServices.dll
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/GrpcServices/bin/Debug/net7.0/Options.dll
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/GrpcServices/bin/Debug/net7.0/Options.pdb
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/GrpcServices/bin/Debug/net7.0/Postgres.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/GrpcServices/bin/Debug/net7.0/Postgres.pdb

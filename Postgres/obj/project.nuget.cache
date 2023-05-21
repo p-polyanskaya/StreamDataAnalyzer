@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "cTrmbvhcAUUCbHEEPsxXx3xVEh2IfYSxqzBO1+5hPP4f6nQ0n+PRlX92O9ghIlUXwTwQbgveIqC79bvIqsDhzQ==",
+  "success": true,
+  "projectFilePath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/Postgres/Postgres.csproj",
+  "expectedPackageFiles": [
+    "/Users/polina/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512",
+    "/Users/polina/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/polina/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "/Users/polina/.nuget/packages/microsoft.extensions.options/7.0.1/microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "/Users/polina/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/polina/.nuget/packages/npgsql/7.0.4/npgsql.7.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

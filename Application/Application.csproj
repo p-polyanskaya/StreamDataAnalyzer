@@ -16,6 +16,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Domain\Domain.csproj" />
       <ProjectReference Include="..\Options\Options.csproj" />
+      <ProjectReference Include="..\Postgres\Postgres.csproj" />
       <ProjectReference Include="..\Redis\Redis.csproj" />
     </ItemGroup>
 

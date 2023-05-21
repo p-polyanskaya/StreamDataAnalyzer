@@ -19,10 +19,6 @@
 /Users/polina/RiderProjects/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/Application.pdb
 /Users/polina/RiderProjects/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/Serializator.pdb
 /Users/polina/RiderProjects/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/Redis.pdb
-/Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/microsoft-spark-2-4_2.11-2.1.1.jar
-/Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/microsoft-spark-3-0_2.12-2.1.1.jar
-/Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/microsoft-spark-3-1_2.12-2.1.1.jar
-/Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/microsoft-spark-3-2_2.12-2.1.1.jar
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/Consumers.deps.json
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/Consumers.dll
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/Consumers.pdb
@@ -46,3 +42,5 @@
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/obj/Debug/net7.0/ref/Consumers.dll
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/Options.dll
 /Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/Options.pdb
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/Postgres.dll
+/Users/polina/Documents/GitHub/StreamDataAnalyzer/Consumers/bin/Debug/net7.0/Postgres.pdb

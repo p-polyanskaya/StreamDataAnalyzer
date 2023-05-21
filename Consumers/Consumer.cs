@@ -5,8 +5,6 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using Microsoft.Spark.Sql;
-using Microsoft.Spark.Sql.Streaming;
 using Options;
 using Serializator;
 
@@ -41,41 +39,36 @@ public class Consumer : BackgroundService
         consumer.Subscribe(_consumerSettings.Value.ConsumerForSendingMessagesToAnalyze.Topic);
         while (!stoppingToken.IsCancellationRequested)
         {
-            /*
-            var spark = SparkSession
-                .Builder()
-                .AppName("Streaming example with a UDF")
-                .GetOrCreate();
-
-            var dataFrame = spark
-                .ReadStream()
-                .Format("kafka")
-                .Option("host", "kafka.bootstrap.servers")
-                .Option("port", _consumersOptions.Value.ConsumerForSendingMessagesToAnalyze.BootstrapServers)
-                .Option("subscribe",  _consumersOptions.Value.ConsumerForSendingMessagesToAnalyze.Topic)
-                .Load();
-            dataFrame
-                .WriteStream()
-                .Trigger(Trigger.ProcessingTime(5000))
-                .Start();
-            dataFrame.Show();
-            */
-            
             try
             {
                 var consumeResult = consumer.Consume(stoppingToken);
-                Console.WriteLine(consumeResult.Message.Value.Text);
-                var analysisResult = new AnalysisResult(consumeResult.Message.Value, "common");
-                var request = new HandleAnalyzedMessageCommand.Request(new[] { analysisResult });
+
+                var topicOfNews = GetTopicOfNews(consumeResult.Message.Value.Text);
+                var analysisResult = new AnalysisResult(consumeResult.Message.Value, topicOfNews);
+                var request = new HandleAnalyzedMessageCommand.Request(analysisResult);
 
                 using var scope = _serviceProvider.CreateScope();
                 var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
                 await mediator.Send(request, stoppingToken);
                 consumer.Commit(consumeResult);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                Console.WriteLine("Ошибка при отправке проанализированного сообщения. " + ex.Message);
             }
         }
+    }
+
+    private string GetTopicOfNews(string textOfNews)
+    {
+        return "common";
+    }
+    
+    private enum Article
+    {
+        World = 1,
+        Sports = 2,
+        Business = 3,
+        Tech = 4
     }
 }

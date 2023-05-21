@@ -43,7 +43,8 @@ public static class HandleStreamMessageCommand
             }
             catch (Exception ex)
             {
-                //_redis.SaveBigData(request.Message);
+                Console.WriteLine("Ошибка при отправке сообщения на анализ. " + ex.Message);
+                _redis.SaveFailedMessage(request.Message);
             }
             
             return Unit.Value;

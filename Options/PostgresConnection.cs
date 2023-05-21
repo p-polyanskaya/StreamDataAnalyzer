@@ -2,5 +2,5 @@ namespace Options;
 
 public class PostgresConnection
 {
-    public string Url { get; set; }
+    public string Connection { get; set; }
 }

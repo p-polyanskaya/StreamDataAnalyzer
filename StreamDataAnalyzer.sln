@@ -16,6 +16,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serializator", "Serializato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Options", "Options\Options.csproj", "{1C51AFCC-7CF4-4C64-AEC5-CB245948C3AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CronJob", "CronJob\CronJob.csproj", "{0AEF3468-49F3-4BDD-8D23-20C12BFAA796}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migration", "Migration\Migration.csproj", "{C925E64A-3874-4E58-91CA-C28B94EC5372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postgres", "Postgres\Postgres.csproj", "{FEAB6BC2-3BDE-4729-90D3-249ABFCD4F7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +60,17 @@ Global
 		{1C51AFCC-7CF4-4C64-AEC5-CB245948C3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C51AFCC-7CF4-4C64-AEC5-CB245948C3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C51AFCC-7CF4-4C64-AEC5-CB245948C3AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AEF3468-49F3-4BDD-8D23-20C12BFAA796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AEF3468-49F3-4BDD-8D23-20C12BFAA796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AEF3468-49F3-4BDD-8D23-20C12BFAA796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AEF3468-49F3-4BDD-8D23-20C12BFAA796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C925E64A-3874-4E58-91CA-C28B94EC5372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C925E64A-3874-4E58-91CA-C28B94EC5372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C925E64A-3874-4E58-91CA-C28B94EC5372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C925E64A-3874-4E58-91CA-C28B94EC5372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEAB6BC2-3BDE-4729-90D3-249ABFCD4F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEAB6BC2-3BDE-4729-90D3-249ABFCD4F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEAB6BC2-3BDE-4729-90D3-249ABFCD4F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEAB6BC2-3BDE-4729-90D3-249ABFCD4F7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

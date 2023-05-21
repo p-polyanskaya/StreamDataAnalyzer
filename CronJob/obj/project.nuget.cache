@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "rEokWxycjkMUcEJ2EsKJw0CIelIFf5PsatMXla2ZmYkeTh7Dnx85uWyXzpzzUpGYp4ObGzTHvV5S1m1oBifYVg==",
+  "success": true,
+  "projectFilePath": "/Users/polina/Documents/GitHub/StreamDataAnalyzer/CronJob/CronJob.csproj",
+  "expectedPackageFiles": [
+    "/Users/polina/.nuget/packages/confluent.kafka/2.1.0/confluent.kafka.2.1.0.nupkg.sha512",
+    "/Users/polina/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512",
+    "/Users/polina/.nuget/packages/librdkafka.redist/2.1.0/librdkafka.redist.2.1.0.nupkg.sha512",
+    "/Users/polina/.nuget/packages/mediatr/12.0.1/mediatr.12.0.1.nupkg.sha512",
+    "/Users/polina/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/polina/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/polina/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "/Users/polina/.nuget/packages/microsoft.extensions.options/7.0.1/microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "/Users/polina/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/polina/.nuget/packages/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512",
+    "/Users/polina/.nuget/packages/npgsql/7.0.4/npgsql.7.0.4.nupkg.sha512",
+    "/Users/polina/.nuget/packages/pipelines.sockets.unofficial/2.2.2/pipelines.sockets.unofficial.2.2.2.nupkg.sha512",
+    "/Users/polina/.nuget/packages/stackexchange.redis/2.6.104/stackexchange.redis.2.6.104.nupkg.sha512",
+    "/Users/polina/.nuget/packages/system.io.pipelines/5.0.1/system.io.pipelines.5.0.1.nupkg.sha512",
+    "/Users/polina/.nuget/packages/system.memory/4.5.0/system.memory.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

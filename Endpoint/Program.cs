@@ -1,8 +1,13 @@
 using Application;
 using Consumers;
+using CronJob;
+using EndPoint;
 using GrpcServices;
-using Microsoft.Spark.Hadoop.Conf;
+using Hangfire;
+using Hangfire.MemoryStorage;
+using Migration;
 using Options;
+using Postgres;
 using Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,10 +26,31 @@ builder.Services.AddScoped<RedisOperations>();
 builder.Services.AddGrpc();
 builder.Services.AddGrpcReflection();
 
+builder.Services.AddHangfire(x => x.UseMemoryStorage(new MemoryStorageOptions()));
+
+builder.Services.AddHangfireServer();
+builder.Services.AddScoped<RetryRedisJob>();
+
+builder.Services.AddScoped<FailedMessagesRepository>();
+
+//настройка миграций постгреса
+builder.Services.SetPostgres();
 
 var app = builder.Build();
 
+app.Migrate();
+
 app.MapGrpcService<StreamGrpcService>();
 app.MapGrpcReflectionService();
+
+var options = new BackgroundJobServerOptions
+{
+    SchedulePollingInterval = TimeSpan.FromMilliseconds(2000)
+};
+app.UseHangfireServer(options);
+app.UseHangfireDashboard("/mydashboard");
+
+RecurringJob.AddOrUpdate<RetryRedisJob>(nameof(RetryRedisJob), x => x.Execute(),  "*/2 * * * * *");
+RecurringJob.AddOrUpdate<RetryPostgresJob>(nameof(RetryPostgresJob), x => x.Execute(),  "*/2 * * * * *");
 
 app.Run();
