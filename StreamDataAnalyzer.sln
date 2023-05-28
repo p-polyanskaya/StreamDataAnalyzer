@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postgres", "Postgres\Postgr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{E1C66360-7766-4117-BAEF-147EE12F1A6F}"
 	ProjectSection(SolutionItems) = preProject
-		Dockerfile = Dockerfile
+		Docker\Dockerfile = Docker\Dockerfile
 	EndProjectSection
 EndProject
 Global

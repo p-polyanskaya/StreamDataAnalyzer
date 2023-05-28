@@ -43,7 +43,7 @@ public static class HandleAnalyzedMessageCommand
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Ошибка при отправке проанализированного сообщения. " + ex.Message);
+                Console.WriteLine("Ошибка при отправке проанализированного сообщения. " + ex.Message + ex.StackTrace);
 
                 var failedMessage = new FailedMessage
                 {

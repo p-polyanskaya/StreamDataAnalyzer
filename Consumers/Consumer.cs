@@ -59,7 +59,7 @@ public class Consumer : BackgroundService
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Ошибка при отправке проанализированного сообщения. " + ex.Message);
+                Console.WriteLine("Ошибка при отправке проанализированного сообщения. " + ex.Message + ex.StackTrace);
             }
         }
     }

@@ -36,7 +36,17 @@ builder.Services.AddScoped<RetryRedisJob>();
 builder.Services.AddScoped<FailedMessagesRepository>();
 
 //настройка миграций постгреса
-builder.Services.SetPostgres();
+var connectionString = builder
+    .Configuration
+    .GetSection("PostgresConnection:Connection")
+    .Get<string>();
+
+if (connectionString is null)
+{
+    throw new InvalidOperationException("Cannot find connection string");
+}
+
+builder.Services.SetPostgres(connectionString);
 
 builder.Services
     .AddPredictionEnginePool<ModelInput, ModelOutput>()
@@ -57,7 +67,10 @@ var options = new BackgroundJobServerOptions
     SchedulePollingInterval = TimeSpan.FromMilliseconds(2000)
 };
 app.UseHangfireServer(options);
-app.UseHangfireDashboard("/mydashboard");
+app.UseHangfireDashboard("/mydashboard", new DashboardOptions()
+{
+    Authorization = new []{ new HangfireAllowAnonymousFilter() }
+});
 
 RecurringJob.AddOrUpdate<RetryRedisJob>(nameof(RetryRedisJob), x => x.Execute(),  "*/2 * * * * *");
 RecurringJob.AddOrUpdate<RetryPostgresJob>(nameof(RetryPostgresJob), x => x.Execute(),  "*/2 * * * * *");
