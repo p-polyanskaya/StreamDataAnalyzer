@@ -29,4 +29,17 @@
       <ProjectReference Include="..\Redis\Redis.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.ML" Version="2.0.0-preview.22551.1" />
+        <PackageReference Include="Microsoft.Data.Analysis" Version="0.20.0-preview.22324.1" />
+        <PackageReference Include="Microsoft.ML.TorchSharp" Version="0.20.0-preview.22324.1" />
+        <PackageReference Include="TorchSharp-cpu" Version="0.96.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="model.zip">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

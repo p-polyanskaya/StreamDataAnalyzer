@@ -1,10 +1,12 @@
 using Application;
 using Consumers;
 using CronJob;
+using Endpoint;
 using EndPoint;
 using GrpcServices;
 using Hangfire;
 using Hangfire.MemoryStorage;
+using Microsoft.Extensions.ML;
 using Migration;
 using Options;
 using Postgres;
@@ -35,6 +37,13 @@ builder.Services.AddScoped<FailedMessagesRepository>();
 
 //настройка миграций постгреса
 builder.Services.SetPostgres();
+
+builder.Services
+    .AddPredictionEnginePool<ModelInput, ModelOutput>()
+    .FromFile(
+        modelName: "NewsRecommendation",
+        filePath: "model.zip",
+        watchForChanges: false);
 
 var app = builder.Build();
 

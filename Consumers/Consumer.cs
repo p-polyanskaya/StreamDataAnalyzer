@@ -1,9 +1,11 @@
 ﻿using Application;
 using Confluent.Kafka;
 using Domain;
+using Endpoint;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.ML;
 using Microsoft.Extensions.Options;
 using Options;
 using Serializator;
@@ -15,11 +17,14 @@ public class Consumer : BackgroundService
     private readonly IOptions<ConsumersSettings> _consumerSettings;
     private readonly ConsumerBuilder<Ignore, Message> _builder;
     private readonly IServiceProvider _serviceProvider;
+    private readonly PredictionEnginePool<ModelInput, ModelOutput> _enginePool;
 
-    public Consumer(IOptions<ConsumersSettings> consumerSettings, IServiceProvider serviceProvider)
+    public Consumer(IOptions<ConsumersSettings> consumerSettings, IServiceProvider serviceProvider,
+        PredictionEnginePool<ModelInput, ModelOutput> enginePool)
     {
         _consumerSettings = consumerSettings;
         _serviceProvider = serviceProvider;
+        _enginePool = enginePool;
         var config = new ConsumerConfig
         {
             BootstrapServers = _consumerSettings.Value.ConsumerForSendingMessagesToAnalyze.BootstrapServers,
@@ -61,7 +66,16 @@ public class Consumer : BackgroundService
 
     private string GetTopicOfNews(string textOfNews)
     {
-        return "common";
+        var modelInput = new ModelInput
+        {
+            Sentence = textOfNews
+        };
+        
+        var result = _enginePool.Predict(modelName: "NewsRecommendation", modelInput);
+
+        var topic = ((Article)(result.PredictedLabel)).ToString("G");
+        
+        return topic;
     }
     
     private enum Article
